@@ -42,12 +42,13 @@ print(dir(h))
 x = input()
 
 def is_int(x):
-    if isinstance( x, int ) or (x - int(x) == 0):
+    b = float(x) - int(float(x))
+    if isinstance( x, int ) or (b == 0):
         return True
     else:
         return False
 
-# print(is_int(x))
+print(is_int(x))
 print(x)
 
 
