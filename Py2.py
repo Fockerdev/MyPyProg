@@ -36,3 +36,18 @@ for t,y in enumerate(h):
 from random import sample
 print(dir(sample))
 print(dir(r))
+print(dir(h))
+
+
+x = input()
+
+def is_int(x):
+    if isinstance( x, int ) or (x - int(x) == 0):
+        return True
+    else:
+        return False
+
+# print(is_int(x))
+print(x)
+
+
