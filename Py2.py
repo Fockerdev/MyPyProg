@@ -8,7 +8,7 @@ random_number = randint(1, 10)
 
 guesses_left = 3
 # Start your game!
-while guesses_left>0:
+'''while guesses_left>0:
     guess = int(input("Your guess: "))
     if guess == random_number:
         print('You win!')
@@ -16,3 +16,23 @@ while guesses_left>0:
     guesses_left-=1
 else:
     print('You LOSE!')
+
+'''
+
+r = {"a":1, "b":2, "c":3}
+
+for a in r:
+    print(a, r[a])
+
+
+h = [2,3,4,5,6,7]
+
+
+# List numeration
+
+for t,y in enumerate(h):
+    print(t, y)
+
+from random import sample
+print(dir(sample))
+print(dir(r))
