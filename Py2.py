@@ -41,6 +41,8 @@ print(dir(h))
 
 x = input()
 
+'''
+
 def is_int(x):
     b = float(x) - int(float(x))
     if isinstance( x, int ) or (b == 0):
@@ -50,5 +52,30 @@ def is_int(x):
 
 print(is_int(x))
 print(x)
+
+'''
+def digit_sum(n):
+    if int(n) <=0:
+        print("Negative")
+    else:
+        b=0
+        for a in n:
+            a=int(a)
+            b+=a
+        return b
+
+print(digit_sum(x))
+
+
+
+n = input("Факториял числа ")
+n = int(n)
+fac = 1
+i = 0
+while i < n:
+    i+=1
+    fac = fac*i
+print("равен", fac)
+
 
 
