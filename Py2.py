@@ -38,10 +38,10 @@ print(dir(sample))
 print(dir(r))
 print(dir(h))
 
-
+'''
 x = input()
 
-'''
+
 
 def is_int(x):
     b = float(x) - int(float(x))
@@ -81,7 +81,7 @@ while i < n:
     fac = fac*i
 print("равен", fac)
 
-'''
+
 input(x)
 
 def is_prime(x):
@@ -95,3 +95,43 @@ def is_prime(x):
   return True
 
 print(is_prime(x))
+'''
+
+##############     revers STRING   ##############
+list1="data1$$#@"
+
+def reverse(text):
+    if len(text) <= 1:
+        return text
+
+    return reverse(text[1:]) + text[0]
+
+print(reverse(list1))
+
+print(list1[0:2])
+
+print(list1[-1])
+
+
+print(reverse(list1[0:]))
+print(list1[0:])
+
+
+####     REMOVE VOWELS FROM STRING    ###########
+
+string2 = "Hey My programmer developer"
+
+vowels = ["a", "A", "i", "I", "o", "O", "u", "U", "e", "E"]
+
+def anti_vowel(string2):
+    vowels = ["a", "A", "i", "I", "o", "O", "u", "U", "e", "E"]
+    new_text=''
+    for letter in string2:
+        if letter not in vowels:
+            new_text=new_text + letter
+        else:
+            new_text = new_text
+
+    return new_text
+
+print(anti_vowel(string2))
