@@ -1,6 +1,5 @@
 __author__ = 'Focker'
 
-
 from random import randint
 
 # Generates a number from 1 through 10 inclusive
@@ -19,21 +18,21 @@ else:
 
 '''
 
-r = {"a":1, "b":2, "c":3}
+r = {"a": 1, "b": 2, "c": 3}
 
 for a in r:
     print(a, r[a])
 
-
-h = [2,3,4,5,6,7,10,9,8]
+h = [2, 3, 4, 5, 6, 7, 10, 9, 8]
 
 
 # List numeration
 
-for t,y in enumerate(h):
-    print(t+1, y)
+for t, y in enumerate(h):
+    print(t + 1, y)
 
 from random import sample
+
 print(dir(sample))
 print(dir(r))
 print(dir(h))
@@ -69,7 +68,6 @@ def digit_sum(n):
 print(digit_sum(x))
 '''
 
-
 '''
 # Факториал
 n = input("Факториал числа ")
@@ -98,7 +96,8 @@ print(is_prime(x))
 '''
 
 ##############     revers STRING   ##############
-list1="data1$$#@"
+list1 = "data1$$#@"
+
 
 def reverse(text):
     if len(text) <= 1:
@@ -106,12 +105,12 @@ def reverse(text):
 
     return reverse(text[1:]) + text[0]
 
+
 print(reverse(list1))
 
 print(list1[0:2])
 
 print(list1[-1])
-
 
 print(reverse(list1[0:]))
 print(list1[0:])
@@ -123,16 +122,18 @@ string2 = "Hey My programmer developer"
 
 vowels = ["a", "A", "i", "I", "o", "O", "u", "U", "e", "E"]
 
+
 def anti_vowel(string2):
     vowels = ["a", "A", "i", "I", "o", "O", "u", "U", "e", "E"]
-    new_text=''
+    new_text = ''
     for letter in string2:
         if letter not in vowels:
-            new_text=new_text + letter
+            new_text = new_text + letter
         else:
             new_text = new_text
 
     return new_text
+
 
 print(anti_vowel(string2))
 
@@ -149,18 +150,20 @@ score = {"a": 1, "c": 3, "b": 3, "e": 1, "d": 2, "g": 2,
 
 data1 = "erereq"
 
+
 def scrabble_score(word):
     score_end = 0
     for letter in word:
         score_end += score[letter]
     return score_end
 
+
 print(scrabble_score(data1))
 print(score["h"])
-a=[]
+a = []
 
-for key,value in score.items():
-    #print(key)
+for key, value in score.items():
+    # print(key)
     #print(type(a))
     a.append(key)
 
@@ -171,18 +174,23 @@ print(a)
 text3 = "Hello my little brother, Hello"
 word3 = "Hello"
 
+
 def censor(text3, word3):
+    b = ''
     # return text3.replace(word3, ("*"*len(word3)))
-    #  return ' '.join([('*' * len(word)) if x == word else x for x in text.split()])
-    splited = text3.split(" ")
-    w = " "
-    for i in splited:
-        if i == word3:
-            w = w + "7 ".join("****")
+    # return ' '.join([('*' * len(word3)) if x == word3 else x for x in text3.split()])
+    for x in text3.split():
+        if x == word3:
+            a = '*' * len(word3)
+            b = b + " " + a
         else:
-            w = w + "8 ".join(i)
-    return w
+            m = x
+            b = b + " " + m
+    return b.strip()
 
 
-print(censor(text3,word3))
+print(censor(text3, word3))
 
+h= 6
+j = [h**2+i for i in range(6)]
+print(j)
