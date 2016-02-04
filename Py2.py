@@ -194,3 +194,44 @@ print(censor(text3, word3))
 h= 6
 j = [h**2+i for i in range(6)]
 print(j)
+
+#################     PRINT NUMBER OF SYMBOL IN LIST   ###############
+sequence = ['a','c','c','a','v','b','b','b']
+item = 'b'
+
+def count(sequence, item):
+    a = 0
+    for i in sequence:
+        if i == item:
+            a+=1
+        else:
+            continue
+    return a
+
+print(count(sequence,item))
+
+############  REMOVE ODD NUMBERS FROM LIST ########
+
+s=0
+b=[s for s in range(1,10)]
+
+def purify(pureList):
+    a=[]
+    for i in pureList:
+        if i%2==0:
+            a.append(i)
+        else:
+            continue
+    return a
+
+print(purify(b))
+
+####################  MULTIPLY ALL ELTVENTS IN LIST   ############
+
+def product(ListProd):
+    a=1
+    for i in ListProd:
+        a=a*i
+    return a
+
+print(product(b))
