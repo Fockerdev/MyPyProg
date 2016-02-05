@@ -164,7 +164,7 @@ a = []
 
 for key, value in score.items():
     # print(key)
-    #print(type(a))
+    # print(type(a))
     a.append(key)
 
 print(a)
@@ -191,47 +191,96 @@ def censor(text3, word3):
 
 print(censor(text3, word3))
 
-h= 6
-j = [h**2+i for i in range(6)]
+h = 6
+j = [h ** 2 + i for i in range(6)]
 print(j)
 
 #################     PRINT NUMBER OF SYMBOL IN LIST   ###############
-sequence = ['a','c','c','a','v','b','b','b']
+sequence = ['a', 'c', 'c', 'a', 'v', 'b', 'b', 'b']
 item = 'b'
+
 
 def count(sequence, item):
     a = 0
     for i in sequence:
         if i == item:
-            a+=1
+            a += 1
         else:
             continue
     return a
 
-print(count(sequence,item))
+
+print(count(sequence, item))
 
 ############  REMOVE ODD NUMBERS FROM LIST ########
 
-s=0
-b=[s for s in range(1,10)]
+s = 0
+b = [s for s in range(1, 10)]
+
 
 def purify(pureList):
-    a=[]
+    a = []
     for i in pureList:
-        if i%2==0:
+        if i % 2 == 0:
             a.append(i)
         else:
             continue
     return a
+
 
 print(purify(b))
 
 ####################  MULTIPLY ALL ELTVENTS IN LIST   ############
 
 def product(ListProd):
-    a=1
+    a = 1
     for i in ListProd:
-        a=a*i
+        a = a * i
     return a
 
+
 print(product(b))
+
+#########################     REMOVE DUPLICATES ##################
+
+
+
+def remove_duplicates(ListDub):
+    return list(set(ListDub))
+
+
+print(remove_duplicates(sequence))
+
+
+def remove_duplicates1(ListDub1):
+    r = []
+    for a in ListDub1:
+        if a not in r:
+            r.append(a)
+    return r
+
+
+print(remove_duplicates1(sequence))
+
+
+###################   COUNT MEDIAN   #############
+
+medList = [1, 4, 3, 2, 7, 6, 9, 8, 12, 2]
+med1 = [4,5,5,4]
+med2 = [6, 8, 12, 2, 23]
+
+
+def median(medList):
+    medList.sort()
+    if len(medList) == 1:
+        return medList[0]
+    elif len(medList) % 2 != 0:
+        a = len(medList) / 2
+        print(a)
+        return medList[(len(medList) - int(len(medList) / 2 + 0.5))]
+    else:
+        return (medList[(int(len(medList) / 2))] + medList[(int(len(medList) / 2 - 1))]) / 2
+
+
+print(median(med2))
+print(7 % 2)
