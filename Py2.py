@@ -284,3 +284,33 @@ def median(medList):
 
 print(median(med2))
 print(7 % 2)
+
+
+
+###############   LIST FUNCTION  #################
+
+grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
+
+def print_grades(grades):
+    i = 0
+    while i < len(grades):
+        print(grades[i])
+        i+=1
+
+print(print_grades(grades))
+
+def sum(scores):
+    i = 0
+    scoreAll = 0
+    while i < len(scores):
+        print(scores[i])
+        scoreAll += scores[i]
+        i+=1
+    return scoreAll
+
+print(sum(grades))
+
+def grades_average(grades):
+    return sum(grades)/float(len(grades))
+
+print(grades_average(grades))
