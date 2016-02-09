@@ -314,3 +314,23 @@ def grades_average(grades):
     return sum(grades)/float(len(grades))
 
 print(grades_average(grades))
+
+
+def grades_variance(scores):
+    average = grades_average(scores)
+    variance=  0
+    for score in scores:
+        variance +=(average - score)**2
+    return variance/len(scores)
+
+print(grades_variance(grades))
+
+
+
+def grades_std_deviation(variance):
+    return variance ** 0.5
+
+
+variance = grades_variance(grades)
+
+print(grades_std_deviation(variance))
