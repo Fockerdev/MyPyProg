@@ -65,3 +65,34 @@ print(0b1 + 0b11)
 
 print("-----")
 print(bin(0b1 << 2))
+
+############ CLASSES  #####################
+
+
+class MyClass(object):
+    def __init__(self):
+        self.data = 4
+
+number1 = MyClass()
+print(number1.data)
+
+print("-----")
+
+class Animal(object):
+    gogo = "gogo"
+    def __init__(self, name, nik, data):
+        self.name = name
+        self.nik = nik
+        self.data = data
+    def description(self):
+        print(self.nik)
+        print(self.data)
+        print(self.gogo)
+
+mouse = Animal("Mimi", "Mimi2", 3)
+mouse.description()
+
+print(mouse.data, mouse.gogo)
+
+
+
