@@ -92,10 +92,18 @@ class Animal(object):
 mouse = Animal("Mimi", "Mimi2", 3)
 mouse.nik = "Mimi3"
 mouse.description()
-
-
-
 print(mouse.data, mouse.gogo)
+class AnimalMini(Animal):
+    def tutu(self):
+        print("kokoko")
+
+
+hen = AnimalMini("set", "let",6)
+
+print(hen.nik)
+
+
+
 
 
 
