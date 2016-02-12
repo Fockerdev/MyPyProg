@@ -90,7 +90,10 @@ class Animal(object):
         print(self.gogo)
 
 mouse = Animal("Mimi", "Mimi2", 3)
+mouse.nik = "Mimi3"
 mouse.description()
+
+
 
 print(mouse.data, mouse.gogo)
 
