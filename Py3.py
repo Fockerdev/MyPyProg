@@ -104,6 +104,8 @@ print(hen.nik)
 
 print("-----")
 
+#####################  SUPER CLASS #######################
+
 class Employee(object):
     """Models real-life employees!"""
     def __init__(self, employee_name):
@@ -126,6 +128,23 @@ milton = PartTimeEmployee("gogi")
 
 print(milton.full_time_wage(20))
 
+class Triangle(object):
+    def __init__(self, angle1, angle2, angle3):
+        self.angle1 = angle1
+        self.angle2 = angle2
+        self.angle3 = angle3
 
 
+########################   OPEN  FILES    ###########################
 
+
+my_list = [i**2 for i in range(1,11)]
+# Generates a list of squares of the numbers 1 - 10
+
+f = open("D:\Education\Programming\Python\WorkFiles\output.txt", "a")
+
+
+for item in my_list:
+    f.write(str(item) + "\n")
+
+f.close()
