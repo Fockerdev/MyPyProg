@@ -141,10 +141,33 @@ class Triangle(object):
 my_list = [i**2 for i in range(1,11)]
 # Generates a list of squares of the numbers 1 - 10
 
-f = open("D:\Education\Programming\Python\WorkFiles\output.txt", "a")
-
+f = open("D:\Education\Programming\Python\WorkFiles\output.txt", "w")
+f1 = open("D:\Education\Programming\Python\WorkFiles\output.txt", "r")
+f2 = open("D:\Education\Programming\Python\WorkFiles\output2.txt", "w")
+f3 = open("D:\Education\Programming\Python\WorkFiles\output2.txt", "r")
 
 for item in my_list:
     f.write(str(item) + "\n")
 
+f2.write("line1\n")
+f2.write("line2\n")
+f2.write("line3\n")
+f2.close()
+
+print(f1.read())
+print(f3.readline())
+print(f3.readline())
+print(f3.readline())
+
+print(f.closed)
 f.close()
+print(f.closed)
+f1.close()
+
+f3.close()
+
+with open("D:\Education\Programming\Python\WorkFiles\output3.txt", "w") as textfile:
+	textfile.write("Success!")
+
+with open("D:\Education\Programming\Python\WorkFiles\output3.txt", "r") as textfile1:
+    print(textfile1.read())
